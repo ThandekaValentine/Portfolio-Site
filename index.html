@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thandeka Valentine Thwala</title>
+<!-- Google Font link for Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!-- Link to CSS -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">My Site</div>
+  <div class= "menu-toggle" id="menu-toggle">&#9776;</div>
+<nav id="nav-links">
+<a href="#home">Home</a>
+<a href="#experiences">Experience</a>
+<a href="#SkillsAndCertifications">Skills & Certifications</a>
+<a href="#Contact">Contact</a>
+</nav>
+  </header>
+  
+<main>
+  
+<section id="home">
+
+<div class="intro">
+<h1>Hi, I’m Thandeka Valentine Thwala</h1>
+<h2><span id="typing-text"></span><span class="cursor">|</span></h2>
+<p>I’m a motivated and technically skilled IT professional with hands-on experience in Workforce Management, Web Development, and Programming. I love using creativity and problem-solving to make technology work better for people.</p>
+  
+<script>
+ const textArray = [
+   "Junior Workforce Management Consultant",
+   "Programmer",
+   "Creative Thinker"
+ ];
+ let textIndex = 0;
+ let charIndex = 0;
+ const typingText = document.getElementById("typing-text");
+ function type() {
+   if (charIndex < textArray[textIndex].length) {
+     typingText.textContent += textArray[textIndex].charAt(charIndex);
+     charIndex++;
+     setTimeout(type, 100);
+   } else {
+     textIndex++;
+     if (textIndex < textArray.length) {
+       typingText.textContent += " | "; // add separator
+       charIndex = 0;
+       setTimeout(type, 500);
+     }
+   }
+ }
+ document.addEventListener("DOMContentLoaded", () => {
+   type();
+ });
+</script>
+  </div>
+  <div class="image-slideshow" id="slideshow">
+    <div class="slide active">
+      <img src="Images/BackImage.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="Images/Cartoon.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="Images/BackImage.jpg" alt="Slide 3">
+    </div>
+    
+   <!-- Navigation Buttons -->
+  <button class="nav prev">&#10094;</button>
+  <button class="nav next">&#10095;</button>
+    
+   <!-- Dot Indicators -->
+    <div class="dots">
+    <span class="dot" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+</div>
+  </section>
+  
+  
+  <section id="experiences">
+        <section id="experience" class="experience">
+<h2>My Experience</h2>
+<div class="experience-item">
+<h3>Junior Workforce Management Consultant</h3>
+<p><strong>Altron Digital Business</strong> | Oct 2024 – Present</p>
+<ul>
+<li>Support, troubleshoot issues, and configure Workforce Central and Workforce Dimensions systems to align with client requirements.</li>
+</ul>
+</div>
+<div class="experience-item">
+<h3>Workforce Management Intern</h3>
+<p><strong>Altron Digital Business</strong> | Oct 2023 – Sept 2024</p>
+<ul>
+<li>Learned systems through hands-on experience and formal training.</li>
+<li>Earned certifications, delivered presentations, assisted in system configurations and support.</li>
+</ul>
+</div>
+<div class="experience-item">
+<h3>Volunteer Mentor</h3>
+<p><strong>Tshimong Foundation - UNICEF</strong> | Sep 2022 – March 2023</p>
+<ul>
+<li>Assessed student performance, developed improvement strategies, made recommendations, suggested training programs, and offered guidance.</li>
+</ul>
+</div>
+</section>
+   </section> 
+    
+    
+    
+      
+<section id="SkillsAndCertifications">
+  <h2>My Skills & Certifications</h2>
+
+  <div class="skills-certifications-container">
+    <section class="skills-section">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>System Analysis and Design</li>
+        <li>Programming: Java, C#</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database Systems: MySQL, Microsoft Access</li>
+        <li>Software Development Life Cycle (SDLC)</li>
+        <li>Workforce Central & Workforce Dimensions (configuration, support)</li>
+        <li>Microsoft Office Suite</li>
+        <li>Strong Communication & Presentation Skills</li>
+      </ul>
+    </section>
+
+    <section class="certifications-section">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Microsoft Office | Microsoft</li>
+        <li>Artificial Intelligence in the 4th Industrial Revolution | University of Johannesburg</li>
+        <li>Introduction to Coding | She Codes</li>
+        <li>Professional Developer Integration Certificate | Dell Boomi</li>
+        <li>Workforce Central – Accruals, Scheduler, and Timekeeper | UKG</li>
+        <li>Workforce Dimensions – Accruals, Forecaster, Scheduler, and Timekeeper | UKG</li>
+      </ul>
+    </section>
+  </div>
+</section>
+
+  
+  
+  
+  
+  
+  
+    
+  <section id="Contact">  
+  <h1>Contact Me</h1>
+<p>I'd love to hear from you! Feel free to reach out using the form below or connect with me on social media.</p>
+<form class="contact-form">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+         
+<!-- LinkedIn link form below -->
+<p style="text-align: center; margin-top: 20px;">
+         <a href = "https://www.linkedin.com/in/thandeka-valentine-thwala-4a0419193?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target= "_blank" class = "linkedin-link">Connect with me on LinkedIn 
+    </a>
+         </p>
+    </section>
+  </main>
+    
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.nav.prev');
+    const nextBtn = document.querySelector('.nav.next');
+    const slideshow = document.getElementById('slideshow');
+
+    let current = 0;
+    let isPaused = false;
+    let interval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active', 'exit-left');
+        if (i === index) {
+          slide.classList.add('active');
+        } else if (i === current) {
+          slide.classList.add('exit-left');
+        }
+      });
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+
+      current = index;
+    }
+
+    function nextSlide() {
+      const next = (current + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (current - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        showSlide(parseInt(dot.dataset.index));
+      });
+    });
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    slideshow.addEventListener('mouseenter', () => isPaused = true);
+    slideshow.addEventListener('mouseleave', () => isPaused = false);
+
+    function startSlideshow() {
+      interval = setInterval(() => {
+        if (!isPaused) nextSlide();
+      }, 3000);
+    }
+
+    startSlideshow();
+  </script>
+  </body>
+</html>
