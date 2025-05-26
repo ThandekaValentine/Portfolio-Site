@@ -9,12 +9,12 @@ body, html {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-  color: #333;
+  color: rgb(51, 51, 51);
   height: 100%;
 }
 
 main {
-  margin-top: 60px;
+  margin-top: -21px;
 }
 
 /* === Header & Navigation === */
@@ -105,16 +105,16 @@ nav.show {
 
 .intro h1 {
   font-size: 3rem;
-  color: #ff6f91;
+  color: #f757dd;
 }
 
 .intro h2 {
   font-size: 1.8rem;
-  color: rgba(227, 255, 0, 0.93);
+  color: rgb(227, 255, 0);
 }
 
 .intro p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   margin: 20px 0;
 }
@@ -135,8 +135,8 @@ nav.show {
 /* === Slideshow === */
 .image-slideshow {
   position: relative;
-  width: 501px;
-  height: 349px;
+  width: 321px;
+  height: 468px;
   overflow: hidden;
   margin: 50px auto;
   border-radius: 12px;
@@ -178,7 +178,7 @@ nav.show {
   transform: translateY(-50%);
   background-color: #ff6f91;
   border: none;
-  color: #e3ff6f;
+  color: #ccfc07;
   padding: 10px;
   cursor: pointer;
   font-size: 18px;
@@ -215,26 +215,12 @@ nav.show {
   background-color: #717171;
 }
 
-/* === Buttons === */
-.cta-button {
-  background-color: white;
-  color: #ff6f91;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, color 0.3s;
-}
 
-.cta-button:hover {
-  background-color: #ff6f91;
-  color: white;
-}
 
 /* === Section Padding === */
 section {
-  padding: 100px 20px;
-  min-height: 100vh;
+  padding: 90px 40px;
+  min-height: 1vh;
 }
 
  /* Start - Experience Page -----------------------------------------------------------------------------------------------------*/
@@ -312,14 +298,14 @@ section {
 
 #SkillsAndCertifications {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  background: linear-gradient(135deg, #fad0c4, #ffd1ff);
   color: #333;
   text-align: center;
 }
 
 #SkillsAndCertifications h2 {
   font-size: 2.5rem;
-  color: #00796b;
+  color: #ff6f91;
   margin-bottom: 40px;
   font-weight: bold;
 }
@@ -467,5 +453,65 @@ section {
 .linkedin-link:hover {
   background-color: #e1ff00;
   color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* === Buttons === */
+.cta-button {
+  background-color: white;
+  color: #ff6f91;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff6f91;
+  color: white;
+}
+
+#formMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#formMessage.success {
+  color: green;
+}
+
+#formMessage.error {
+  color: red;
 }
 /* End - Contact Page -------------------------------------------------------------------------------------------------------*/
