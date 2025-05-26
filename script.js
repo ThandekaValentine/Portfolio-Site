@@ -80,4 +80,72 @@ dots.forEach(dot => {
 // Show first slide by default
 showSlide(slideIndex);
 
+const form = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const formMessage = document.getElementById('formMessage');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  if (!name || !email || !message) {
+    formMessage.textContent = 'Please fill in all fields.';
+    formMessage.className = 'error';
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    formMessage.textContent = 'Please enter a valid email address.';
+    formMessage.className = 'error';
+    return;
+  }
+
+  formMessage.textContent = 'Sending...';
+  formMessage.className = '';
+
+  setTimeout(() => {
+    formMessage.textContent = 'Message sent successfully!';
+    formMessage.className = 'success';
+    form.reset();
+  }, 1000);
+});
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formMessage = document.getElementById('form-message');
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      formMessage.style.color = 'green';
+      formMessage.textContent = 'Thanks for your message! I’ll get back to you soon.';
+      form.reset();
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (error) {
+    formMessage.style.color = 'red';
+    formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+  }
+});
 
