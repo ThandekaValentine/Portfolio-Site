@@ -29,13 +29,18 @@
 <div class="intro">
 <h1>Hi, I’m Thandeka Valentine Thwala</h1>
 <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
-<p>I’m a motivated and technically skilled IT professional with hands-on experience in Workforce Management, Web Development, and Programming. I love using creativity and problem-solving to make technology work better for people.</p>
+<p>A Junior IT Professional with a passion for both technology and the arts. I hold a BCom in Information Systems (Cum Laude) from North West University and currently work as a Junior Workforce Management Consultant at Altron Digital Business.
+I thrive in environments that value both analytical thinking and creative problem-solving. I’m passionate about using technology to improve systems and experiences — and just as passionate about living a creative, curious life.<br><br>
+In my spare time, I enjoy painting simple, calming artworks, exploring the vibrant streets of Johannesburg, and experimenting with new recipes in the kitchen. I also love challenging my mind with Sudoku and getting lost in the visual storytelling of anime.<br><br>
+This website marks a personal milestone — my first fully built-from-scratch portfolio. Every
+part of it, from the layout to the content, is a reflection of my growth, interests, and aspirations as a young professional in tech.<br><br>
+Thank you for taking the time to explore my world.ing creativity and problem-solving to make technology work better for people.</p>
   
 <script>
  const textArray = [
    "Junior Workforce Management Consultant",
-   "Programmer",
-   "Creative Thinker"
+   "Aspiring Programmer",
+   "Art Enthusiast"
  ];
  let textIndex = 0;
  let charIndex = 0;
@@ -64,10 +69,16 @@
       <img src="Images/BackImage.jpg" alt="Slide 1">
     </div>
     <div class="slide">
-      <img src="Images/Cartoon.jpg" alt="Slide 2">
+      <img src="Images/Headshot1.jpg" alt="Slide 2">
     </div>
     <div class="slide">
-      <img src="Images/BackImage.jpg" alt="Slide 3">
+      <img src="Images/Qualification.jpg" alt="Slide 3">
+    </div>
+    <div class="slide">
+      <img src="Images/Headshot2.jpg" alt="Slide 4">
+    </div>
+    <div class="slide">
+      <img src="Images/GraduationStage.jpg" alt="Slide 5">
     </div>
     
    <!-- Navigation Buttons -->
@@ -79,13 +90,14 @@
     <span class="dot" data-index="0"></span>
     <span class="dot" data-index="1"></span>
     <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+    <span class="dot" data-index="4"></span>
+      
   </div>
 </div>
   </section>
   
-  
-  <section id="experiences">
-        <section id="experience" class="experience">
+<section id="experience" class="experience">
 <h2>My Experience</h2>
 <div class="experience-item">
 <h3>Junior Workforce Management Consultant</h3>
@@ -98,7 +110,7 @@
 <h3>Workforce Management Intern</h3>
 <p><strong>Altron Digital Business</strong> | Oct 2023 – Sept 2024</p>
 <ul>
-<li>Learned systems through hands-on experience and formal training.</li>
+<li>Learned Workforce Central and Workforce Dimensions systems through hands-on experience and formal training.</li>
 <li>Earned certifications, delivered presentations, assisted in system configurations and support.</li>
 </ul>
 </div>
@@ -110,7 +122,7 @@
 </ul>
 </div>
 </section>
-   </section> 
+  
     
     
     
@@ -146,25 +158,21 @@
     </section>
   </div>
 </section>
-
-  
-  
-  
-  
-  
-  
     
   <section id="Contact">  
   <h1>Contact Me</h1>
 <p>I'd love to hear from you! Feel free to reach out using the form below or connect with me on social media.</p>
-<form class="contact-form">
-<label for="name">Name</label>
+<form class="contact-form"
+     action="https://formspree.io/f/mjkwzpkp"
+      method="POST">
+<label for="name">Your Name</label>
 <input type="text" id="name" name="name" required>
-<label for="email">Email</label>
+<label for="email">Your Email</label>
 <input type="email" id="email" name="email" required>
-<label for="message">Message</label>
+<label for="message">Write your message...</label>
 <textarea id="message" name="message" rows="5" required></textarea>
-<button type="submit">Send Message</button>
+<button type="submit" class="cta-button">Send Message</button>
+<div id="formMessage"></div>
 </form>
          
 <!-- LinkedIn link form below -->
